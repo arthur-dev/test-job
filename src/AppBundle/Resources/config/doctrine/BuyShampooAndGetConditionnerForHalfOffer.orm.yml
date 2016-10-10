@@ -1,0 +1,4 @@
+AppBundle\Entity\BuyShampooAndGetConditionnerForHalfOffer:
+    type: entity
+    table: app_BuyShampooAndGetConditionner_offer
+    lifecycleCallbacks: {  }

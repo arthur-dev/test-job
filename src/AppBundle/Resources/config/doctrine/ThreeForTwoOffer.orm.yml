@@ -1,0 +1,4 @@
+AppBundle\Entity\ThreeForTwoOffer:
+    type: entity
+    table: app_threeFortwo_offer
+    lifecycleCallbacks: {  }

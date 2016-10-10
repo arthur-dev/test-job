@@ -1,0 +1,36 @@
+AppBundle\Entity\Order:
+    type: entity
+    table: app_order
+    repositoryClass: AppBundle\Repository\OrderRepository
+    id:
+        uid:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        total:
+            type: float
+            nullable: true
+    manyToMany:
+        products:
+          targetEntity: Product
+          joinTable:
+            name: order_product
+            joinColumns:
+              order_id:
+                referencedColumnName: uid
+            inverseJoinColumns:
+              product_id:
+                referencedColumnName: uid
+          cascade: [All]
+        offers:
+            targetEntity: Offer
+            joinTable:
+                name: order_offer
+                joinColumns:
+                  order_id:
+                    referencedColumnName: uid
+                inverseJoinColumns:
+                  offer_id:
+                    referencedColumnName: uid
+            cascade: [All]
+    lifecycleCallbacks: {  }

@@ -1,0 +1,21 @@
+AppBundle\Entity\Product:
+    type: entity
+    table: app_product
+    repositoryClass: AppBundle\Repository\ProductRepository
+    id:
+        uid:
+            type: integer
+            generator: { strategy: AUTO }
+    fields:
+        title:
+            type: string
+            length: '255'
+            nullable: true
+        category:
+            type: string
+            length: '255'
+            nullable: true
+        price:
+            type: float
+            nullable: true
+    lifecycleCallbacks: {  }

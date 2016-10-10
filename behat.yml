@@ -1,0 +1,20 @@
+default:
+    extensions:
+        Behat\Symfony2Extension:
+            kernel:
+                env: test
+                debug: true
+        Behat\MinkExtension:
+            sessions:
+                default:
+                    symfony2: ~
+
+    suites:
+        default:
+            contexts:
+                - FeatureContext: ~
+        app:
+            type: symfony_bundle
+            bundle: AppBundle
+            contexts:
+                - FeatureContext: ~

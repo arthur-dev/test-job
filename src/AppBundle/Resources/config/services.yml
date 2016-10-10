@@ -1,0 +1,8 @@
+services:
+    app_calculateOrderTotal_service:
+        class: AppBundle\Service\CalculateOrderTotalService
+        arguments: []
+
+    app_importData_service:
+        class: AppBundle\Service\ImportDataService
+        arguments: ['@jms_serializer','@doctrine.orm.entity_manager','@app_calculateOrderTotal_service']
