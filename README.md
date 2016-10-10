@@ -19,7 +19,7 @@ php bin/console doctrine:schema:update --force
 
 To use the command line utility :
 
-php bin/console import:order <filepath> <offer>
+php bin/console import:order (filepath) (offer)
 
 the parameters offer is optionnal:
 
