@@ -22,9 +22,12 @@ To use the command line utility :
 php bin/console import:order <filepath> <offer>
 
 the parameters offer is optionnal:
+
 put 1 for the 'offer' : "3 for the price of 2"
+
 put 2 for the 'offer' : "Buy Shampoo & get Conditioner for 50% off"
 
 
-To run the test : 
+To run the test :
+
 bin/behat
